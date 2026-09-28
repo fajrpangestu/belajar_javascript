@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas_2_javascript</title>
+</head>
+
+<body>
+
+    <script>
+
+        let nama = "Tri";
+        let nilaiteori = 90;
+        let nilaipraktek = 90;
+        let kehadiran = 90;
+        let pelanggaranberat = false;
+
+        nilairatarata = (nilaiteori + nilaipraktek)/2
+
+        console.log("nama : " + nama);
+        console.log("nilai : " + nilairatarata);
+
+        if (nilaiteori < 75 || nilaipraktek < 80 || kehadiran < 90 || pelanggaranberat === true) {
+            console.log("Status : Tidak Lulus");
+        } else {
+            console.log("Status : Lulus");
+        }
+        if(nilairatarata >= 90 && pelanggaranberat === false) {
+            console.log("Lulus predikat sangat baik");
+        } else if (nilairatarata >= 85 && pelanggaranberat === false) {
+            console.log("Lulus predikat baik");
+        }
+        if (nilairatarata >= 90 && pelanggaranberat === true) {
+            console.log("Ket : Tidak lulus dengan pelanggaran berat");
+        } else if (nilairatarata >= 85 && pelanggaranberat === true) {
+            console.log("Ket : Tidak lulus karena pelanggaran berat");
+        }
+
+    </script>
+
+</body>
+
+</html>
