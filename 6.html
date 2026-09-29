@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <h1 id="heading" class="heading">Selamat Datang di PPKD Jakarta Pusat</h1>
+    <p id=" isiText">PPKD Jakarta Pusat</p>
+    <h3 id="heading3">Duarrr</h3>
+</body>
+
+</html>
+
+<script>
+
+    const heading = document.querySelector('h1');
+    const headingId = document.getElementById('heading');
+    const headingclass = document.getElementsByClassName('heading');
+    const heading3 = document.querySelector('h3');
+    const heading3All = document.querySelectorAll('h3');
+    console.log(heading3All);
+
+    document.getElementById('isiText').innerText = "PPKD Jakarta Pusat";
+    heading3.innerText = "DUAARRR"
+
+    console.log(heading);
+    
+    heading.innerText = "Selamat Datang di PPKD Jakarta Pusat"
+    heading.textContent = "Selamat Datang di PPKD Jakarta Pusat"
+    heading.innerHTML = "Selamat Datang di PPKD Jakarta Pusat</u>"
+
+    let peserta = {
+        nama: "Fajar",
+        alamat: "Jakarta",
+        jurusan: "Web Programming",
+    }
+
+    console.log(peserta.nama);
+    console.log(peserta.jurusan);
+    console.log(peserta["alamat"]);
+
+    peserta.nilai = 80;
+    console.log(peserta);
+
+    delete peserta.nilai;
+    peserta.status = "Baru";
+    peserta['email'] = "fjrpangestuu@gmail.com";
+    console.log(peserta);
+
+    const siswa = [
+        {
+            id: 1,
+            nama: "Rudi",
+            nilai: 80
+        },
+        {
+            id: 2,
+            nama: "Wawan",
+            nilai: 50
+        },
+        {
+            id: 3,
+            nama: "Ratna"
+            nilai: 75
+        }
+    ]
+    
+    console.log(siswa);
+
+    siswa.forEach ((data, index) => {
+        console.log("data siswa", data);
+        console.log(`data siswa dengan index ${index} yaitu bernama ${data.nama}`);
+    });
+
+    const siswaLulus = siswa.filter((s) => {
+        return s.nilai >= 75;
+    })
+
+    console.log(siswaLulus);
+
+</script>

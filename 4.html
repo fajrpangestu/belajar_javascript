@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Document</title>
+</head>
+<body>
+    
+    <script>
+    //array (struktur data yang bisa menyimpan datanya lebih dari 1)
+        let nama = ["budi","laras","andi"]
+        let keranjang = ["buah","sayuran","ikan"]
+
+        console.log(nama[0])
+        console.log(nama[1])
+        console.log(nama[2])
+        console.log(keranjang[2])
+        nama[2] = "Agung";
+        console.log(nama);
+        nama.push('Raka');
+        nama.unshift("Rozak");
+        console.log("nama baru", nama);
+
+    //length: Count
+        const total = nama.length
+        const totaKeranjang = keranjang.length
+        console.log(nama.length);
+
+    //indexof: method/function
+        const target = nama.indexOf("budi");
+        console.log(target);
+
+    //spread operator: . . .
+        nama = [...nama,"wawan"]
+        nama = ["wawan", ...nama]
+        console.log(nama);
+
+    </script>
+</body>
+</html>

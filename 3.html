@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Document</title>
+</head>
+<body>
+    <script>
+
+// banyak if, pengecekan banyak statement dan kondisi
+// else if
+        const totalBelanja = 1000000
+        const isMember = false;
+        let diskon = 0;
+
+        if (isMember || totalBelanja >= 2000000) {
+            diskon = 0.5; //diskon 50%
+        } else if (totalBelanja >= 500000) {
+            diskon = 0.1; //diskon 10%
+        } else {
+            diskon = 0;
+        }
+        
+        const potongan = totalBelanja * diskon;
+        const bayar = totalBelanja - potongan;
+
+        // console.log("potongan harga : " + potongan)
+        console.log(`Total Belanja : ${totalBelanja}`)
+        console.log(`Potongan Harga : ${potongan}`)
+        console.log(`total bayar : ${bayar}`)
+
+// switch
+        const color = "merah";
+        switch(color) {
+            case "biru":
+                console.log("iya biru");
+                break;
+            case "merah":
+                console.log("iya merah");
+                break;
+            default:
+                console.log("bukan biru");
+
+        }
+
+//perulangan
+        for (let i=0; i < 10; i++){
+            console.log(`nilai variable ${i}`);
+        }
+
+    </script>
+</body>
+</html>

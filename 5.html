@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Document</title>
+</head>
+<body>
+
+    <script>
+//object : struktur data
+    let peserta = {
+        nama: "Fajar",
+        alamat: "Jakarta",
+        jurusan: "Web Programming",
+    }
+
+    console.log(peserta.nama);
+    console.log(peserta.jurusan);
+    console.log(peserta["alamat"]);
+
+    peserta.nilai = 80;
+    console.log(peserta);
+
+    delete peserta.nilai;
+    peserta.status = "Baru";
+    peserta['email'] = "fjrpangestuu@gmail.com";
+    console.log(peserta);
+
+    const siswa = [
+        {
+            id: 1,
+            nama: "Rudi",
+            nilai: 80
+        },
+        {
+            id: 2,
+            nama: "Wawan",
+            nilai: 50
+        },
+        {
+            id: 3,
+            nama: "Ratna"
+            nilai: 75
+        }
+    ]
+
+    siswa.forEach ((data, index) => {
+        console.log("data siswa", data);
+        console.log(`data siswa dengan index ${index} yaitu bernama ${data.nama}`);
+    });
+
+    const siswaLulus = siswa.filter((s) => {
+        return s.nilai >= 75;
+    })
+
+    console.log(siswaLulus);
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <script>
+        const nilai1 = 10;
+        const nilai2 = parseInt(10);
+        const jumlah = nilai1 + nilai2;
+        console.log(jumlah);
+        
+// assigment operator : menambahkan nilai ke dalam suatu variable
+        let total = 100;
+        total += 50;
+        total -= 20;
+        console.log(total);
+
+// operator increment dan decrement : menambah dan mengurang
+        let nomor = 1;
+        nomor++;
+        nomor++;
+        nomor--;
+
+// operaot perbandingan : < (lebih kecil), > (lebih besar), === (membandingkan sampai ke tipe data), == (membandingka), !== (tidak sama dengan)
+        let nama = "budi"
+        let confirmasiNama = "budi";
+        let confirmasi = (nama == confirmasiNama);
+        console.log(nama !== "budi");
+
+        let umur = 20;
+        let batasUmur = 17;
+        let batasan = (umur >= 17);
+
+// operator logika : && (AND), || (OR)
+        let username = "admin";
+        let password = "admin";
+        (username === "admin" && password === "admin") // login berhasil (true)
+        (username === "admin" || password === "admin123") // login berhasil (true)
+
+// operator tenary
+        const age = 20;
+        if (age >= 17) {
+            console.log('dewasa')
+        } else {
+            console.log('anak-anak')
+        }
+
+        const statusAge = age >= 17 ? 'dewasa':'anak-anak'
+        console.log(statusAge);
+
+// operator if else
+        const nilai = 80;
+        const lulus = 75;
+        if(nilai >= lulus) {
+            console.log("selamat anda lulus");
+        } else {
+            console.log("anda tidak lulus");
+        }
+
+        const warna = "biru";
+        if (warna !== "biru") {
+            console.log("iya biru");
+        } else {
+            console.log("bukan biru");
+        }
+
+    </script>
+
+</body>
+
+</html>
