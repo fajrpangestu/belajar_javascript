@@ -1,0 +1,53 @@
+<!-- event : kejadian yg terjadi pada onClick, onChange, onKeyup, onkeyDown -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom dan Event || JavaScript</title>
+</head>
+
+<body>
+
+   <!-- elementTarget.addEventListener(); -->
+    
+    <h1>Form Salam</h1>
+    <input type="text" id="nama" placeholder="Masukan Nama">
+
+    <button id="simpan">Klik Saya</button>
+    <button id="hapus">Hapus</button>
+
+    <p id="salam">Hi Nama : </p>
+
+    <script>
+        const heading = document.querySelector('h1')
+        const nama = document.querySelector('#nama')
+        const salam = document.querySelector('#salam')
+    
+    // bisa dipakai berulang kali
+        function prosesSalam(){
+        salam.innerText = `Hi Nama : ${nama.value}`;
+        nama.value = "";
+        }
+
+        document.getElementById('simpan').addEventListener('click', () => {
+            // heading.innerText = "PPKD Jakarta Pusat";
+            // salam.innerText = `Hi Nama : ${nama.value}`;
+            prosesSalam();
+        })
+
+        nama.addEventListener('keyup', function (event) {
+            if (event.key === "Enter") {
+                prosesSalam();
+            }
+        })
+
+        document.getElementById('hapus').addEventListener('click', function () {
+            prosesSalam();
+        })
+    </script>
+
+</body>
+
+</html>
